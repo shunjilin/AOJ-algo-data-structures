@@ -43,7 +43,7 @@ int main() {
       S.pop();
       S.push(current1 * current2);
     } else {
-      S.push(atoi(word.c_str()));
+      S.push(atoi(word.c_str())); //convert string to int
     }
   }
   std::cout << S.top() << std::endl;
