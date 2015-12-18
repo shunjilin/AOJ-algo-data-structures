@@ -25,6 +25,7 @@ struct list {
     node *last;
 };
 
+// initialize list
 list *list_init(void) {
     list *new_list = new list;
     new_list->count = 0;
@@ -32,8 +33,20 @@ list *list_init(void) {
     return new_list;
 }
 
+//destroy list
+void list_destroy(list *my_list) {
+    node *nodePtr = my_list->first;
+    while (nodePtr != nullptr) {
+      node *temp = nodePtr;
+      nodePtr = nodePtr->next;
+      delete temp;
+    }
+    delete my_list;
+}
+  
+
+// insert element at head of list
 void list_insert(list &my_list, unsigned int element) {
-    
     node *new_node = new node;
     new_node->element = element;
     new_node->prev = nullptr;
@@ -142,5 +155,9 @@ int main()
         }
     }
     
-    list_print(*my_list);    
+    list_print(*my_list);
+
+    list_destroy(my_list);
+    my_list = nullptr;
+    
 }
