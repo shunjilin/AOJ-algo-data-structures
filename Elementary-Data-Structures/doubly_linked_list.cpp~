@@ -1,8 +1,6 @@
 /**
  Doubly Linked List
  
- http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_C
-
  Should have the operations:
  > insert x: insert an element with key x into the front of the list
  > delete x: delete the first element which has the key of x from the list
@@ -10,7 +8,6 @@
  > deleteLast: delete the last element from the list
  
  Shunji Lin
- 18/12/2015
  **/
 
 #include <cstdio>

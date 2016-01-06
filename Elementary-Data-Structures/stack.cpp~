@@ -1,9 +1,6 @@
 /**
    Stack
    <Reverse Polish Notation>
-   
-   http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_A
-   
    e.g. 
    input:  1 2 + 3 4 - * 
    output: -3
