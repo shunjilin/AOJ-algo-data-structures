@@ -206,7 +206,11 @@ void EightQ::solve()
         }
         std::sort(min_con_vector.begin(), min_con_vector.end()); // decreasing order of safe positions
         for (std::vector<min_con_node>::reverse_iterator it2=min_con_vector.rbegin(); it2!=min_con_vector.rend(); ++it2) {
-            it2->child->solve();
+	    if (solved) {
+	        break;
+	    } else {
+	        it2->child->solve();
+	    }
         }
         
         // free memory
@@ -216,7 +220,8 @@ void EightQ::solve()
                 children[i] = nullptr;
             }
         }
-        
+        if (solved) return;
+
     }
  
 }
